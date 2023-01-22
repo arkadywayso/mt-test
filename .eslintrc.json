@@ -1,37 +1,51 @@
 {
-    "settings": {
-        "react": {
-            "pragma": "React",  
-            "fragment": "Fragment",  
-            "version": "detect"
-        }
-    },
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "plugin:react/recommended",
-        "prettier",
-        "plugin:prettier/recommended"
-    ],
-    "overrides": [
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "path": ["./tsconfig.json"],
-        "project": ["./tsconfig.json"]
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": ["error"],
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect"
     }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "path": [
+      "./tsconfig.json"
+    ],
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,16 @@
+.paper {
+    width: 300px;
+    padding: var(--container-padding);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-padding);
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
