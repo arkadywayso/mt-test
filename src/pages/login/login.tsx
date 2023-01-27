@@ -3,7 +3,7 @@ import { Button, Paper, TextField } from '@mui/material';
 import styles from './login.module.css';
 import { IUserCredentials } from '../../core/interfaces/user-credentials.interface';
 import { AuthApi } from '../../core/api/auth-api';
-import { AxiosResponse } from 'axios';
+import { AxiosError, AxiosResponse } from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 export const Login: FC = (): JSX.Element => {
@@ -38,15 +38,17 @@ export const Login: FC = (): JSX.Element => {
     });
   };
 
-  const submit = (): void => {
+  const login = (): void => {
     void AuthApi.login(userCredentials)
       .then((response: AxiosResponse<unknown>) => {
         console.log(response);
+        localStorage.setItem('accessToken', 'tokenValue');
         navigate('/');
       })
-      .catch((response: AxiosResponse<unknown>) => {
-        console.log(response);
+      .catch((error: AxiosError) => {
+        localStorage.setItem('accessToken', 'tokenValue');
         navigate('/');
+        throw new Error(error.message);
       });
   };
 
@@ -62,7 +64,7 @@ export const Login: FC = (): JSX.Element => {
         variant="outlined"
         onChange={setPassword}
       />
-      <Button variant="contained" disabled={disabled} onClick={submit}>
+      <Button variant="contained" disabled={disabled} onClick={login}>
         Войти
       </Button>
     </Paper>

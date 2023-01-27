@@ -7,4 +7,8 @@ export abstract class AuthApi {
   public static async login({ login, password }: IUserCredentials): Promise<AxiosResponse<unknown>> {
     return await axios.post<unknown>(`${API_CONFIG.url}/login`, { login, password });
   }
+
+  public static async logOut(): Promise<AxiosResponse<unknown>> {
+    return await axios.post<unknown>(`${API_CONFIG.url}/logout`);
+  }
 }

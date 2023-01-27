@@ -2,4 +2,18 @@
     width: 100%;
     height: var(--header-height);
     border-bottom: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: var(--container-padding);
+}
+
+.header button {
+    background-color: var(--green-color);
+    border-radius: 0px;
+    margin-right: 5px;
+    display: flex;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
