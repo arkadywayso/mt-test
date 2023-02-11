@@ -55,15 +55,8 @@ export const Login: FC = (): JSX.Element => {
   return (
     <Paper elevation={3} className={styles.paper}>
       <h1>Вход</h1>
-      <TextField id="outlined-basic" size="small" label="Логин" variant="outlined" onChange={setLogin} />
-      <TextField
-        id="outlined-basic"
-        size="small"
-        type="password"
-        label="Пароль"
-        variant="outlined"
-        onChange={setPassword}
-      />
+      <TextField size="small" label="Логин" variant="outlined" onChange={setLogin} />
+      <TextField size="small" type="password" label="Пароль" variant="outlined" onChange={setPassword} />
       <Button variant="contained" disabled={disabled} onClick={login}>
         Войти
       </Button>

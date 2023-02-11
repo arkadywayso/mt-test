@@ -1,0 +1,7 @@
+.addUser {
+    background-color: var(--green-color);
+    display: flex;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 15px;
+}
