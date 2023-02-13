@@ -17,6 +17,6 @@ export class UsersApi {
   }
 
   public static async addUser(user: IUser): Promise<AxiosResponse<IUser>> {
-    return await axios.post<IUser>(`${API_CONFIG.url}/users`);
+    return await axios.post<IUser>(`${API_CONFIG.url}/adduser`, user);
   }
 }
