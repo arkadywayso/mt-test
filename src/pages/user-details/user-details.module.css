@@ -1,0 +1,23 @@
+.backButton {
+    background-color: var(--green-color) !important;
+}
+
+.editUserButton {
+    background-color: var(--green-color) !important;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--container-padding);
+}
+
+.formContainer {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--container-padding);
+    padding-top: var(--container-padding);
+    padding-bottom: var(--container-padding);
+}

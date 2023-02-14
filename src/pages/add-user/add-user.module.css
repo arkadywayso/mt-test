@@ -6,3 +6,18 @@
     padding-top: var(--container-padding);
     padding-bottom: var(--container-padding);
 }
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--container-padding);
+}
+
+.addUserButton {
+    background-color: var(--green-color) !important;
+}
+
+.backButton {
+    background-color: var(--green-color) !important;
+}
